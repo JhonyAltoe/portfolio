@@ -1,11 +1,12 @@
 import shadows from "@mui/material/styles/shadows";
+import { typography } from "@mui/system";
 
 const lightTheme = () => ({ mode: 'dark' });
 const darkTheme = () => ({
   primary: {
     main: '#18181b',
     light: '#3e3e42',
-    dark: '#000000',
+    dark: '#000',
     contrast: '#ffffff',
   },
   secondary: {
@@ -22,15 +23,13 @@ const darkTheme = () => ({
 const getDesignTokens = (mode) => {
   return {
   palette:  {
-    mode,
     ... (mode === 'dark' ? darkTheme() : lightTheme()),
   },
   shadows: {
     ...shadows,
-    xablau: '0px -1px 5px 2px rgba(199,133,255,0.32)',
-    
   },
   typography: {
+    ...typography,
     logo: {
       mr: 2,
       display: { xs: 'none', md: 'flex' },
@@ -40,6 +39,13 @@ const getDesignTokens = (mode) => {
       letterSpacing: '.3rem',
       textDecoration: 'none',
     },
+    h2: {
+      textAlign: 'center',
+      fontWeight: 700,
+      fontFamily: 'monospace',
+      letterSpacing: '.3rem',
+      fontSize: '36px'
+    }
   },
 }};
 
