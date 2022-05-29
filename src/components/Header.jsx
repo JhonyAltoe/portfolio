@@ -24,10 +24,6 @@ const Header = () => {
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [isDarkMode, setIsDarkMode] = useState(true);
 
-  useEffect(() => {
-    console.log(AppBar);
-  }, []);
-
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };

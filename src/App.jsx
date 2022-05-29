@@ -5,7 +5,6 @@ import getDesignTokens from './Helpers/theme-conf';
 
 function App() {
   const theme = createTheme(getDesignTokens('dark'));
-  console.log(theme);
   return (
     <ThemeProvider theme={theme}>
       <Content />

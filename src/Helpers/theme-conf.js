@@ -39,13 +39,19 @@ const getDesignTokens = (mode) => {
       letterSpacing: '.3rem',
       textDecoration: 'none',
     },
+    h1: {
+      fontWeight: 700,
+      fontFamily: 'monospace',
+      letterSpacing: '.3rem',
+      fontSize: '42px'
+    },
     h2: {
       textAlign: 'center',
       fontWeight: 700,
       fontFamily: 'monospace',
       letterSpacing: '.3rem',
-      fontSize: '36px'
-    }
+      fontSize: '24px'
+    },
   },
 }};
 

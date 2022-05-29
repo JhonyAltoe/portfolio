@@ -9,7 +9,7 @@ import { Box, Container } from '@mui/material';
 
 export default function Content() {
   return (
-    <Box sx={ { height: '100vh', bgcolor: 'secondary.dark' } }>
+    <Box sx={ { height: '100vh', bgcolor: 'secondary.dark', overflow: 'auto' } }>
       <Header />
       <Container maxWidth="xl">
         <Profile />
