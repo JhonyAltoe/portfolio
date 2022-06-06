@@ -20,6 +20,8 @@ export default function BasicCard({ children, text }) {
           flexDirection: 'column',
           justifyContent: 'center',
           alignItems: 'center',
+          borderBottom: 2,
+          borderColor: 'secondary.main',
           '&:hover': {
             color: 'secondary.main',
             boxShadow: '0px 0px 8px #9256ed'

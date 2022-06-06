@@ -1,10 +1,10 @@
 import React from 'react';
-import { Typography, Box, Container } from '@mui/material';
+import { Typography, Box, Container, useTheme } from '@mui/material';
 import Card from './BasicCard';
 
 
 import { SiJavascript, SiHtml5, SiReact, SiDocker, SiCss3, SiMysql, SiMaterialui,
-  SiJest, SiSass, SiNodedotjs, SiRedux, SiGit, SiGithub } from 'react-icons/si';
+  SiJest, SiSass, SiNodedotjs, SiRedux, SiGit, SiGithub, SiStyledcomponents } from 'react-icons/si';
 
 
 const techArr = [
@@ -21,17 +21,28 @@ const techArr = [
   { icon: <SiRedux />, text: 'Redux' },
   { icon: <SiGit />, text: 'Git' },
   { icon: <SiGithub />, text: 'GitHub' },
+  { icon: <SiStyledcomponents />, text: 'Styled Component' },
 ];
 
 export default function Frameworks() {
+  const theme = useTheme();
+
   return(
-    <Box sx={ { bgcolor: 'primary.light' } }>
+    <Box sx={ { bgcolor: 'primary.light', pb: 8, pt: 4 } }>
       <Typography
-        variant="h2"
-        component="h2"
-        color="primary.contrast"
+          variant="h3"
+          component="h3"
+          sx={ { color: 'primary.contrastText', fontWeight: 700, fontFamily: 'monospace', letterSpacing: '.3rem', textAlign: 'center' } }
+        >
+          FrameWorks
+      </Typography>
+      <Typography
+        variant="p"
+        component="p"
+        my={ theme.spacing(2) }
+        sx={ { color: 'primary.contrastText', fontFamily: 'monospace', textAlign: 'center' } }
       >
-        Frameworks
+        These are my favorites frameworks:
       </Typography>
       <Container
         sx={{
